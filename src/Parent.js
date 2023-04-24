@@ -22,7 +22,7 @@ const Parent = () => {
   const w = window.innerWidth;
 
   const [showAlert, setshowAlert] = useState(false);
-  const [alertMsg, setalertMsg] = useState('')
+  const [alertMsg, setalertMsg] = useState('') 
   useEffect(() => {
 
     if(authToken==''|| authToken==null){
