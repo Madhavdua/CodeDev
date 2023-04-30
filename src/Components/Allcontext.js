@@ -8,57 +8,10 @@ import {setDoc,getDoc,doc} from 'firebase/firestore'
 
 const Allcontext = (props) => {
 
-  const j=`function clearPage() {
-    // Remove all HTML content from the body element
-    document.body.innerHTML = "";
-  }`
 
-
-    const c=`
-    body{
-      background-color:rgb(227, 220, 202)
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 50px;
-      text-align: center;
-    }
-    
-    h1 {
-      font-size: 48px;
-      margin-bottom: 30px;
-    }
-    
-    p {
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
-    
-    button {
-      display: inline-block;
-      padding: 15px 30px;
-      background-color: #007bff;
-      color: #fff;
-      font-size: 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.2s ease-in-out;
-    }
-    
-    button:hover {
-      background-color: #0062cc;
-    }
-    `
-const h=`<div class="container" id="co">
-<h1 id="c">Welcome to our Website</h1>
-<p>Thank you for visiting our website.</p>
-<button onclick="clearPage()">Let's Code</button>
-</div>`
-
-  const [html, setHtml] = useState(h);
-  const [js, setJs] = useState(j);
-  const [css, setCss] = useState(c);
+  const [html, setHtml] = useState("<h1>Let's Write Some Code</h1>");
+  const [js, setJs] = useState('');
+  const [css, setCss] = useState('');
 
   // login area
   const [mail, setMail] = useState('');
