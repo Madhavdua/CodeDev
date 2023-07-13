@@ -36,17 +36,16 @@ const Parent = () => {
       setshowAlert(false);
     }, 1000);
 
-
-
   }, [authToken])
-  
+
+
 
   return (
     <>
       <HashRouter>
         {/* {!loggedIn && <Main />} */}
         <Store />
-        {(w < 1150) && <Alert message={"Please use PC for better user experience"} color={"danger"} />}
+        {/* {(w<850) && <Alert message={"Please use PC for better user experience"} color={"danger"} />} */}
         {showAlert && <Alert message={alertMsg} color={"success"}/>}
         <div>
           <Routes>

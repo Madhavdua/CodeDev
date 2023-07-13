@@ -29,9 +29,17 @@ export const Leftbar = () => {
         if (authToken && authToken != '') setstatus("Save")
     }, [])
 
+    const w=window.innerWidth;
+
     return (
         <>
-            <div className='border border-start-0 border-4 d-flex flex-column align-items-center py-4   ' style={{ minHeight: "88vh", position: "sticky", display: "block" }}>
+            <div className={`border border-start-0 border-4 d-flex flex-${w>750?`column`:'row'} align-items-center py-${w>750?'4':'1'}` } style={w>750?{ minHeight: "88vh", position: "sticky", display: "block" }
+            :{width:"100vw", height:"100%", justifyContent:"space-around"}
+        }
+            >
+
+
+                
                 <div className='items my-3' >
                     <button className='btn' type='button' data-toggle="tooltip" data-placement="top" title="HTML"  >
                         <Link to="html" className={`text-${location.pathname=="/home/html"||location.pathname=="/home/*"?"primary":"dark"}`} ><i className="fa-solid fa-code fa-2xl"></i></Link>

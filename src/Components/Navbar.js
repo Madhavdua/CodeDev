@@ -27,7 +27,7 @@ export const Navbar = () => {
             <nav className='navbar px-3 bg-dark text-light' style={{height:"9vh", width:"100%"}}>
                 <div className='container-fluid align-items-center'>
 
-                <div className='me-auto p-1'>Let's Code It</div>
+                <div className='me-auto p-1' style={{fontWeight:"bold"}}>Let's Code It</div>
                 <div className='p-1' >{auth?.currentUser?.email}</div>
                 <div className='p-1'>
                     {auth?.currentUser?.email!=null && <button onClick={logout} className='btn btn-outline-info'>Log Out</button>}

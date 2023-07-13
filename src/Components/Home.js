@@ -33,8 +33,6 @@ useEffect(() => {
 }, [authToken])
 
 
-
-
   return (
     <>
           <Navbar/>
@@ -42,7 +40,7 @@ useEffect(() => {
             <div>
               <Leftbar />
             </div>
-            <div className='bg-dark' style={{height:"88vh", width:""}}>
+            <div className='bg-dark' style={window.innerWidth>750 ? {height:`88vh`}:{height:"100%"}}>
               <Routes>
 
                 <Route  path='*' element={<Editor language={"xml"}  value={html} setValue={setHtml}/>}></Route>
@@ -51,9 +49,6 @@ useEffect(() => {
                 <Route  path='/css' element={<Editor language={"css"}  value={css} setValue={setCss}/>}></Route>
 
                 <Route  path='/js' element={<Editor language={"javascript"}  value={js} setValue={setJs} />}></Route>
-
-                {/* <Route exact path='/res' element={<Page />}>
-                </Route> */}
               </Routes>
             </div>
             <div className='bg-dark' style={{height:"88vh"}}>

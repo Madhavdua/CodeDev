@@ -25,23 +25,23 @@ const Editor = (props) => {
       setRun(!run);
       // console.log(run);
   }
-
+const w=window.innerWidth;
   return (
 
     <>
       <div className=''>
 
-        <div className='my-1 mx-4 border border-danger border-2' style={{ overflowY: "auto", overflowX: "hidden", height: "85vh" }}>
+        <div className={`my-1 mx-${w>750?'4':'0'} border border-danger border-2`} style={w>750?{ overflowY: "auto", overflowX: "hidden", height: "85vh"}:{height:"70vh", width:"98vw"}}>
 
-          {(language=="javascript") && <button onClick={handleRun} className=' mx-3 my-2 btn btn-primary text-light' style={{ top: "5vh", left: "15vh", zIndex: 2 }}>Run JavaScript</button>}
+          {(language=="javascript") && <button onClick={handleRun} className=' mx-3 my-2 btn btn-primary text-light position-absolute' style={{ top: "75vh", left: "15vw", zIndex: 2 }}>Run JavaScript</button>}
           <AceEditor
             mode={language}
             theme="monokai"
             name="blah2"
             // onLoad={this.onLoad}
             onChange={setChange}
-            height='83vh'
-            width='40vw'
+            height={w>750?"83vh":"100%"}
+            width={w>750?"40vw":"100%"}
             fontSize={18}
             showPrintMargin={true}
             showGutter={true}

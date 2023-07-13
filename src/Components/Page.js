@@ -31,8 +31,8 @@ export const Page = () => {
   return (
     <>
 
-      <div className='border border-1 my-1 mx-1 bg-light' style={{ width: "47vw", height: "85vh" }}>
-        <iframe className='w-100' style={{ height: "100%" }} srcDoc={srcDoc}
+      <div className='border border-1 my-1 mx-1 bg-light' style={window.innerWidth>750 ? { width: "47vw", height: "85vh" }:{width: "99vw",height:"100%"}}>
+        <iframe className='' style={{ height: "100%" ,width:"90%"}} srcDoc={srcDoc}
           title='output'
           sandbox='allow-scripts'
         ></iframe>
