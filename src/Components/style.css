@@ -1,0 +1,33 @@
+.bothEditorPage{
+    width: 90vw;
+}
+.editor{
+    width: 85vw;
+    height: 86vh;
+}
+.page{
+    position: absolute;
+    z-index: 20;
+    width: 90vw;
+    height: 90vh;
+    top: 10px;
+}
+#pageDiv{
+    transition: all 0.1s ease-in;
+}
+.view{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+@media screen and (max-width:900px) {
+    .page{
+        top: 20%;
+        width: 90vw;
+    }
+    .editor{
+        width: 95vw;
+    }
+}

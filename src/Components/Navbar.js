@@ -15,7 +15,8 @@ export const Navbar = () => {
     
     const logout = async () => {
         await signOut(auth);
-        localStorage.removeItem("token");
+        // localStorage.removeItem("token");
+        localStorage.clear();
         navigate('/')
         window.location.reload();
     }

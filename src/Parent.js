@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext, useState,useEffect } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import textContext from './Components/Context'
 import Main from './Landing/Main'
 import Home from './Components/Home'
@@ -14,21 +14,23 @@ import {
 
 import Store from './Landing/Store'
 
+
+
+
 const Parent = () => {
   const c = useContext(textContext);
-  
-  const { authToken} = c;
+
+  const { authToken, alertMsg, showAlert, setalertMsg, setshowAlert } = c;
 
   const w = window.innerWidth;
 
-  const [showAlert, setshowAlert] = useState(false);
-  const [alertMsg, setalertMsg] = useState('') 
+
   useEffect(() => {
 
-    if(authToken==''|| authToken==null){
+    if (authToken == '' || authToken == null) {
       setalertMsg('Please Log In');
     }
-    else{
+    else {
       setalertMsg('Code Loading');
     }
     setshowAlert(true);
@@ -45,8 +47,8 @@ const Parent = () => {
       <HashRouter>
         {/* {!loggedIn && <Main />} */}
         <Store />
-        {(w<850) && <Alert message={"Please use PC for better user experience"} color={"danger"} />}
-        {showAlert && <Alert message={alertMsg} color={"success"}/>}
+        {(w < 850) && <Alert message={"Please use PC for better user experience"} color={"danger"} />}
+        {showAlert && <Alert message={alertMsg} color={"success"} />}
         <div>
           <Routes>
             <Route exact path='/' element={<Main />}></Route>

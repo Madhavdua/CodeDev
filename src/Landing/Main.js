@@ -17,6 +17,7 @@ const Main = () => {
   const c = useContext(textContext);
   const { loggedIn } = c;
   useEffect(() => {
+    
     const logout = async () => {
       await signOut(auth);
     }
