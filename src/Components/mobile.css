@@ -1,0 +1,37 @@
+@media screen and (max-width:1200px) {
+    .screen{
+        grid-template-areas:
+        "t"
+        "g"
+        "l";
+        height: auto;
+        row-gap: 2vh;
+        justify-content: space-between;
+        width: 100vw;
+    }   
+    .login{
+        margin-top: 2vh;
+    }
+    .t2{
+        height: 5vh
+    } 
+    .main{
+        width: 100vw;
+        margin-top: 8vh;
+    }
+    .person{
+        display: flex;
+        justify-content: center;
+    }
+    .person>img{
+        width: 60%;
+    }
+}
+@media screen and (max-width:750px) {
+    .mainhead{
+        width: 90%;
+    }
+    .t2{
+        width: 60%;
+    }
+}
