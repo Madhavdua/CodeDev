@@ -15,11 +15,8 @@ const Home = () => {
   const c = useContext(textContext);
   const { html, css, js, setCss, setHtml, setJs, setAuthToken, fetch, authToken } = c;
 
-
-
-  // console.log("i am home",auth?.currentUser?.email);
   useEffect(() => {
-
+// 
     setTimeout(() => {
       // console.log("i am home",localStorage.getItem("token"))
       setAuthToken(localStorage.getItem("token"))
@@ -48,7 +45,7 @@ const Home = () => {
               <Route path='/js' element={<Editor language={"javascript"} value={js} setValue={setJs} />}></Route>
             </Routes>
           </div>
-          <div className='bg-dark hide' id='pageDiv'> 
+          <div className='bg-dark hide' id='pageDiv'>
             <Page />
           </div>
         </div>

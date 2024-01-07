@@ -25,6 +25,9 @@
 .hide{
     display: none;
 }
+.items-img{
+    width: 5vh;
+}
 
 @media screen and (max-width:900px) {
     .page{

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import textContext from './Context'
 
 
-import { db, auth } from '../Config/Firebase'
+import { db } from '../Config/Firebase'
 import { setDoc, getDoc, doc } from 'firebase/firestore'
 
 
@@ -22,7 +22,7 @@ const Allcontext = (props) => {
     localStorage.setItem('js', e);
   }
 
-//********** SATES ****************
+  //********** SATES ****************
   const [html, setHtmlState] = useState(localStorage.getItem('html'));
   const [css, setCssState] = useState(localStorage.getItem('css'));
   const [js, setJsState] = useState(localStorage.getItem('js'));
@@ -34,11 +34,11 @@ const Allcontext = (props) => {
 
   const [run, setRun] = useState(false)
   const [showAlert, setshowAlert] = useState(false);
-  const [alertMsg, setalertMsg] = useState('') 
+  const [alertMsg, setalertMsg] = useState('')
 
   // backend
   const fetch = async () => {
-    if (authToken == '') {
+    if (authToken === '') {
       console.log("no user logged in")
       return
     }
@@ -60,11 +60,11 @@ const Allcontext = (props) => {
     }
   }
   const upload = async () => {
-    if (authToken == null || authToken == '') {
+    if (authToken === null || authToken === '') {
       setshowAlert(true);
-      setTimeout(()=>{
+      setTimeout(() => {
         setshowAlert(false);
-      },2000);
+      }, 2000);
       setalertMsg("Kindly login to save progress ")
       // console.log("login to save progress")
 
@@ -88,7 +88,7 @@ const Allcontext = (props) => {
 
   return (
     <>
-      <textContext.Provider value={{ html, css, js, setCss, setHtml, setJs, password, setPassword, mail, setMail, authToken, setAuthToken, upload, fetch, run, setRun ,showAlert,setshowAlert,setalertMsg,alertMsg}}>
+      <textContext.Provider value={{ html, css, js, setCss, setHtml, setJs, password, setPassword, mail, setMail, authToken, setAuthToken, upload, fetch, run, setRun, showAlert, setshowAlert, setalertMsg, alertMsg }}>
         {props.children}
       </textContext.Provider>
     </>

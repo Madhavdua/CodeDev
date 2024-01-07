@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext, useState, useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import textContext from './Components/Context'
 import Main from './Landing/Main'
 import Home from './Components/Home'

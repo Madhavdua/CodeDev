@@ -7,7 +7,7 @@ import "ace-builds/src-noconflict/theme-monokai";
 
 // import Allcontext from './Allcontext';
 import textContext from './Context';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import './style.css'
 
 const Editor = (props) => {
@@ -16,7 +16,7 @@ const Editor = (props) => {
   const {run,setRun}=c;
 
   const { language, value, setValue } = props;
-  const JsButton = (language == "javascript")
+  // const JsButton = (language == "javascript")
   const setChange = (e) => {
     setValue(e)
   }
@@ -25,7 +25,7 @@ const Editor = (props) => {
       setRun(!run);
       // console.log(run);
   }
-const w=window.innerWidth;
+// const w=window.innerWidth;
   return (
 
     <>
